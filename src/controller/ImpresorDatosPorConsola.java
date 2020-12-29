@@ -16,7 +16,6 @@ import model.Vehiculo;
 public class ImpresorDatosPorConsola {
 	
 	private List<Vehiculo> listaVehiculos;
-	private double mayorPrecio; //Variable que se utilizará para ordenar los vehículos por precio
 
 	public ImpresorDatosPorConsola(List<Vehiculo> vehiculos) {
 		this.listaVehiculos = vehiculos;
@@ -44,7 +43,6 @@ public class ImpresorDatosPorConsola {
 					indice = i;
 				}			
 			}	
-			this.mayorPrecio = this.listaVehiculos.get(indice).getPrecio();
 			System.out.println("Vehículo más caro: " + this.listaVehiculos.get(indice).getMarca() + " " + this.listaVehiculos.get(indice).getModelo());
 		}
 	
@@ -102,7 +100,7 @@ public class ImpresorDatosPorConsola {
 		});
 		
 		for (Vehiculo vehiculo : listaVehiculos) {
-			System.out.printf(vehiculo.toString() + "$%.2f%n", vehiculo.getPrecio());
+			System.out.printf(vehiculo.getMarca() + " " + vehiculo.getModelo() + "\n");
 		}
 		
 	}
